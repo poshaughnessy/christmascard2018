@@ -8,14 +8,14 @@
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
   </head>  
   <body>    
-    <a-scene embedded arjs="debugUIEnabled: false; patternRatio: 0.9">
+    <a-scene embedded arjs="debugUIEnabled: false; patternRatio: 0.75">
         <a-assets>
             <a-asset-item id="snowman-obj" src="models/snowman/obj/snowman.obj"></a-asset-item>
             <a-asset-item id="snowman-mtl" src="models/snowman/obj/snowman.mtl"></a-asset-item>
         </a-assets>
 
         <a-marker preset="pattern" type="pattern" url="pattern-marker.patt">
-          <a-entity obj-model="obj:#snowman-obj;mtl:#snowman-mtl" scale="2 2 2"></a-entity>
+          <a-entity obj-model="obj:#snowman-obj;mtl:#snowman-mtl" scale="0.8 0.8 0.8" rotation="0 -90 0"></a-entity>
         </a-marker>
 
         <a-entity camera></a-entity>      
