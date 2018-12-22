@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Merry Christmas</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+  </head>  
+  <body>    
+    <a-scene embedded arjs="debugUIEnabled: false;">
+        <a-assets>
+            <a-asset-item id="snowman-obj" src="models/snowman/obj/snowman.obj"></a-asset-item>
+            <a-asset-item id="snowman-mtl" src="models/snowman/obj/snowman.mtl"></a-asset-item>
+        </a-assets>
+
+        <a-marker preset="pattern" type="pattern" url="https://cdn.glitch.com/548c358d-9b53-4e28-9ca1-c119ef2bfe7f%2Fpattern-marker.patt?1536834951374">
+          <a-entity obj-model="obj:#snowman-obj;mtl:#snowman-mtl" scale="2 2 2"></a-entity>
+        </a-marker>
+
+        <a-entity camera></a-entity>      
+    </a-scene>
+    
+    <script>
+      // Workaround for an AR.js bug (https://github.com/jeromeetienne/AR.js/issues/410)
+      const sceneEl = document.querySelector('a-scene');
+      sceneEl.addEventListener('loaded', () => {
+        sceneEl.camera = new THREE.PerspectiveCamera();
+      });
+    </script>
+  </body>
+</html>
