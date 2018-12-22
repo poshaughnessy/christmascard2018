@@ -10,7 +10,7 @@ My 2018 digital Christmas 'card' for my colleagues: an AR snowman experience usi
 * Visit [the demo](https://2018.peter.christmas) on your mobile phone, or a laptop with a webcam.
 * Press the 'Go' button
 * Allow access to your camera and turn your volume up
-* Point your camera at the image
+* Point your camera at the logo
 * Enjoy the Christmas scene and music!
 
 ## Browser support
