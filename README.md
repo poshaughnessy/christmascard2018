@@ -6,8 +6,8 @@ My 2018 digital Christmas 'card' for my colleagues: an AR snowman experience usi
 
 ## Instructions
 
-* [Open this image](marker.png) up on a device such as your laptop, or print it out.
-* Visit [the demo](https://2018.peter.christmas) on another device, such as your mobile phone.
+* Get a John Lewis & Partners logo ready. [Here's a version that should work well](marker.png). You could open it on your laptop, or print it out.
+* Visit [the demo](https://2018.peter.christmas) on your mobile phone, or a laptop with a webcam.
 * Press the 'Go' button
 * Allow access to your camera and turn your volume up
 * Point your camera at the image
