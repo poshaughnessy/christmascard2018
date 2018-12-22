@@ -4,33 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Merry Christmas</title>
-    <script>
-      AFRAME.registerComponent('registerevents', {
-        init: function () {
-          var marker = this.el;
-          var audioEl = document.getElementById('audio');
-          var snowEl = document.getElementById('snow');
-          var lookingEl = document.getElementById('looking');
-          var audio = audioEl.components.sound;
-
-          marker.addEventListener('markerFound', function() {
-            var markerId = marker.id;
-            console.log('markerFound', markerId);
-            audio.playSound();
-            snow.setAttribute('visible', 'true');
-            looking.style.display = 'none';
-          });
-
-          marker.addEventListener('markerLost', function() {
-            var markerId = marker.id;
-            console.log('markerLost', markerId);
-            audio.stopSound();
-            snow.setAttribute('visible', 'false');
-            looking.style.display = 'block';
-          });
-        }
-      });
-    </script>
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet"> 
     <style>
       html, 
