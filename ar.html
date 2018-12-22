@@ -57,7 +57,6 @@
     </style>
   </head>  
   <body>
-    <p id="looking">Looking for the image...</div>
     <a-scene embedded arjs="debugUIEnabled: false; patternRatio: 0.75">
       <a-assets>
         <a-asset-item id="snowman-obj" src="models/snowman/obj/snowman.obj"></a-asset-item>
@@ -70,6 +69,7 @@
       <a-entity id="snow" visible="false" particle-system="preset: snow; particleCount: 5000" position="0 0 0"></a-entity>
       <a-entity camera></a-entity>
     </a-scene>
+    <p id="looking">Looking for the image...</div>
     <script>
       // Workaround for an AR.js bug (https://github.com/jeromeetienne/AR.js/issues/410)
       const sceneEl = document.querySelector('a-scene');
