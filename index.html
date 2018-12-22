@@ -6,29 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
     <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.9/dist/aframe-particle-system-component.min.js"></script>
     <script>
       AFRAME.registerComponent('registerevents', {
         init: function () {
           var marker = this.el;
           var audioEl = document.getElementById('audio');
+          var snowEl = document.getElementById('snow');
           var audio = audioEl.components.sound;
 
           marker.addEventListener('markerFound', function() {
             var markerId = marker.id;
             console.log('markerFound', markerId);
             audio.playSound();
+            snow.setAttribute('visible', 'true');
           });
 
           marker.addEventListener('markerLost', function() {
             var markerId = marker.id;
             console.log('markerLost', markerId);
             audio.stopSound();
+            snow.setAttribute('visible', 'false');
           });
         }
       });
     </script>
   </head>  
-  <body>    
+  <body>
     <a-scene embedded arjs="debugUIEnabled: false; patternRatio: 0.75">
         <a-assets>
             <a-asset-item id="snowman-obj" src="models/snowman/obj/snowman.obj"></a-asset-item>
@@ -37,10 +41,12 @@
 
         <a-marker preset="pattern" type="pattern" url="pattern-marker.patt" registerevents>
           <a-entity obj-model="obj:#snowman-obj;mtl:#snowman-mtl" scale="0.8 0.8 0.8" rotation="0 -90 0"></a-entity>
-          <a-sound id="audio" src="audio/frosty.mp3"></a-sound>
+          <a-entity sound="src: #river"></a-entity>
+          <a-sound id="audio" src="audio/frosty.mp3" loop="true"></a-sound>          
         </a-marker>
 
-        <a-entity camera></a-entity>      
+        <a-entity id="snow" visible="false" particle-system="preset: snow; particleCount: 5000" position="0 0 0"></a-entity>
+        <a-entity camera></a-entity>
     </a-scene>
     
     <script>
