@@ -20,3 +20,7 @@ Tested in Chrome for Android and Samsung Internet for Android.
 NB. Samsung Internet requires the 'Manual Zoom' setting to be switched off, otherwise there is an AR.js problem whereby you only see a small part of the camera view, zoomed in.
 
 (Please let me know if you spot issues in other browsers and I'll try to fix!)
+
+## Previous Christmas cards
+
+[Here's the whole collection, since 2010](https://peter.christmas).
